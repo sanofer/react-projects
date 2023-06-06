@@ -132,6 +132,15 @@ p {
   .section {
     width: 95vw;
   }
+  .tours {
+    grid-template-columns: repeat(3, 1fr);
+    align-items: start;
+  }
+}
+.tours {
+  padding: 2rem 0;
+  display: grid;
+  gap: 2rem;
 }
 .btn {
   background: var(--clr-primary-5);
@@ -153,7 +162,7 @@ Tours
 */
 main {
   width: 90vw;
-  max-width: var(--fixed-width);
+  max-width: var(--max-width);
   margin: 5rem auto;
 }
 .loading {
@@ -172,6 +181,7 @@ main {
 }
 
 .single-tour {
+  position: relative;
   background: var(--clr-white);
   border-radius: var(--radius);
   margin: 2rem 0;
@@ -207,8 +217,11 @@ main {
   padding-left: 0.25rem;
 }
 .tour-price {
-  color: var(--clr-primary-5);
-  background: var(--clr-primary-10);
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: var(--clr-white);
+  background: var(--clr-green-dark);
   padding: 0.25rem 0.5rem;
   border-radius: var(--radius);
 }
